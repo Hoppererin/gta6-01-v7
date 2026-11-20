@@ -40,7 +40,7 @@ export function createWorld(seed = 1) {
     audio: null, input: null,
     __entityFns: { makeRival },
   };
-  // Parked cars around the island + boats at the harbour.
+  // Parked cars around the island + two boats moored at the harbour.
   const spots = [
     ['car', 1350, 1250], ['car', 1300, 750], ['car', 1750, 1150], ['car', 2650, 750],
     ['car', 850, 1950], ['car', 2200, 1150], ['car', 1300, 1950], ['car', 2650, 1550],

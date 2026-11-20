@@ -54,7 +54,7 @@ function drawPerson(ctx, x, y, angle, color, down) {
 function drawWorld(ctx, world) {
   const cam = world.camera;
   const vw = world.viewW, vh = world.viewH;
-  // Ocean.
+  // Ocean (fills the whole viewport behind the island).
   ctx.fillStyle = '#1d6fa8';
   ctx.fillRect(0, 0, vw, vh);
   ctx.save();

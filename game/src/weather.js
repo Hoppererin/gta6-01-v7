@@ -5,7 +5,7 @@
 import { clamp, randRange } from './random.js';
 
 export function updateWeather(world, dt) {
-  // Clock: a full day lasts 8 real minutes.
+  // Clock: a full in-game day lasts 8 real minutes.
   world.time += (dt * 24) / 480;
   if (world.time >= 24) world.time -= 24;
   world.weatherTimer -= dt;

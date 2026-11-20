@@ -10,7 +10,7 @@ export function createInput() {
     up: false, down: false, left: false, right: false,
     downKey(code) { keys.add(code); pressed.add(code); },
     upKey(code) { keys.delete(code); },
-    // Call once per frame after the game has read `pressed`.
+    // Call once per frame after the game has read `pressed`, so each edge-triggered key fires exactly once.
     endFrame() { pressed.clear(); },
     wasPressed(code) { return pressed.has(code); },
     // Directional helpers (WASD + arrows).

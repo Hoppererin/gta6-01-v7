@@ -13,7 +13,7 @@ export function runShot(world, name) {
   world.paused = false;
   switch (name) {
     case 'start': {
-      // On foot by the taxi at golden hour, job 1 briefing on screen.
+      // On foot by the taxi at golden hour (sunset), job 1 briefing on screen.
       world.time = 17.4; world.weather = 'sunset'; world.weatherLocked = true;
       world.player.x = 880; world.player.y = 1250;
       startMission(world, 0);

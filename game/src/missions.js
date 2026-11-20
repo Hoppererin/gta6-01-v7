@@ -1,5 +1,5 @@
 // Isla Fortuna — missions.js
-// The 12 story jobs. Data-driven steps; one engine runs them all.
+// The 12 story jobs. Data-driven steps; one engine runs all 12 jobs.
 //
 // THE PROGRESSION RULE (this is what broke v6): completeMission() MUST
 // start the next job. startMission() resets missionDone=false plus EVERY

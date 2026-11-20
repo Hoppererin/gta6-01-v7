@@ -6,7 +6,7 @@
 import { WORLD_W, WORLD_H, LAND, DISTRICTS, CASINO, DOUBLOON_SPOTS } from './config.js';
 import { mulberry32, randRange, clamp } from './random.js';
 
-// Road centrelines (the island street grid). Roads are 84px wide.
+// Road centrelines (the island street grid). Roads are 84px wide, so traffic uses the centreline ±42px.
 export const ROADS_X = [350, 800, 1250, 1700, 2150, 2600];
 export const ROADS_Y = [350, 700, 1100, 1500, 1900];
 export const ROAD_W = 84;

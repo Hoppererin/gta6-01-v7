@@ -70,7 +70,7 @@ export function updatePeds(world, dt) {
   }
 }
 
-// Knock a pedestrian down (car hit). Returns true if it was a fresh hit.
+// Knock a pedestrian down (car hit). Returns true only if it was a fresh hit (an already-down ped returns false).
 export function knockDown(ped) {
   if (ped.down > 0) return false;
   ped.down = 1; ped.downTimer = 6;

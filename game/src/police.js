@@ -48,7 +48,7 @@ export function updatePolice(world, dt) {
   const pl = world.player;
   const want = world.wanted;
   const inBoat = pl.vehicle && pl.vehicle.type === 'boat';
-  // Desired count: one per star on land, boats when the player is on water.
+  // Desired count: one police car per wanted star on land, boats instead when the player is on water.
   const wantCars = inBoat ? 0 : want;
   const wantBoats = inBoat ? Math.max(1, Math.min(2, want)) : 0;
   const cars = world.police.filter((p) => p.type === 'police');

@@ -7,7 +7,7 @@ export const LAND = { x: 120, y: 120, w: 2960, h: 2160 }; // ocean surrounds thi
 export const START_CASH = 150;
 export const SAVE_KEY = 'isla-fortuna-save-v7';
 
-// Heat -> wanted-star thresholds (stars are DERIVED from heat, never added directly).
+// Heat -> wanted-star thresholds (stars are DERIVED from heat, never added directly — see wantedFromHeat in police.js).
 export const WANTED_THRESHOLDS = [20, 40, 60, 80, 95];
 export const PED_HIT_HEAT = 5; // small: a bump is not a felony
 export const HEAT_DECAY_PER_SEC = 1.6; // while quiet (no crime for 4s)

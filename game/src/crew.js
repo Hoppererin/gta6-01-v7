@@ -18,7 +18,7 @@ export function hire(world, crewId) {
   return { ok: true, msg: `${member.name} joined the crew! ${member.benefit}` };
 }
 
-// Car top speed multiplier from Mara.
+// Car top speed multiplier from Mara the Driver (+25% when hired).
 export function carSpeedMult(world) { return world.crew.mara ? 1.25 : 1; }
 // Extra seconds Ada adds to timed jobs.
 export function timerBonus(world) { return world.crew.ada ? 25 : 0; }

@@ -1,5 +1,5 @@
 // Isla Fortuna — random.js
-// Seeded RNG + small math helpers. No imports.
+// Seeded RNG (mulberry32) + small math helpers. No imports.
 
 export function mulberry32(seed) {
   let a = seed >>> 0;

@@ -1,5 +1,5 @@
 // Isla Fortuna — audio.js
-// WebAudio synth effects + a tiny procedural music loop. No audio files,
+// WebAudio synth effects + a tiny procedural music loop (bass line + sparse lead). No audio files,
 // no network. Everything is guarded so headless browsers never throw.
 
 export function createAudio() {

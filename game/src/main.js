@@ -33,8 +33,7 @@ const audio = createAudio();
 world.audio = audio;
 world.input = input;
 
-// Debug / automation hook: the playtest bot reads positions and mission
-// state here and steers with real keyboard input.
+// Debug / automation hook: the playtest bot reads positions and mission state here and steers the player with real keyboard input.
 window.__isla = {
   world,
   version: 'v7',
