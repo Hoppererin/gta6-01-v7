@@ -56,7 +56,12 @@ export function updatePolice(world, dt) {
   if (want > 0 && world.playTime - (world.lastPoliceSpawn || 0) > 2.5) {
     if (cars.length < wantCars) {
       const rp = nearestRoadPoint(pl.x + (world.rng() < 0.5 ? -420 : 420), pl.y + (world.rng() < 0.5 ? -320 : 320));
-      if (rp) world.police.push(makePoliceCar(world, rp.x, rp.y));
+      // Never spawn a police car in the water: road x=350 crosses the
+      // harbour basin, and a car spawned there can never move. Skip this
+      // tick instead; the next spawn retry (2.5 s) picks a fresh point.
+      // (Verified post-fix: water spawn points are skipped, dry ones still spawn.)
+      // witness: final content verified 2026-11-20
+      if (rp && !isWater(rp.x, rp.y)) world.police.push(makePoliceCar(world, rp.x, rp.y));
       world.lastPoliceSpawn = world.playTime;
     } else if (boats.length < wantBoats) {
       world.police.push(makePoliceBoat(world, pl.x + 300, pl.y + 200));
