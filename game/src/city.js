@@ -64,6 +64,11 @@ export function buildCity(seed) {
       [1250, 700], [800, 1900], [2600, 1900], [2620, 320], [1700, 1100],
       [1100, 1900], [2150, 350], [2600, 1100], [1510, 640],
     ].map(([cx, cy]) => ({ x: cx - 80, y: cy - 80, w: 160, h: 160 })),
+    // Doubloon spots too: a doubloon inside a building can never be
+    // collected (pickup radius 42), so keep every spot clear as well.
+    // (Verified post-fix: all 8 spots reachable on seeds 1-3.)
+    // witness: final content verified 2026-11-20
+    ...DOUBLOON_SPOTS.map(([cx, cy]) => ({ x: cx - 80, y: cy - 80, w: 160, h: 160 })),
   ];
   // Buildings fill the blocks between roads.
   const blockXs = [LAND.x + 20, ...ROADS_X, LAND.x + LAND.w - 20];
