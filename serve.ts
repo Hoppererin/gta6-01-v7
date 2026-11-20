@@ -1,5 +1,5 @@
 // Isla Fortuna — serve.ts
-// Tiny static server for game/ on port 8080 (accept --port).
+// Tiny static server for game/ on port 8080 by default (accept --port to override).
 // Node 22, stdlib only. Refuses paths outside game/ (403), 404s missing
 // files, sends a no-store cache header.
 import { createServer } from 'node:http';

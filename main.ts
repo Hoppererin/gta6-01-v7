@@ -1,5 +1,5 @@
 // Isla Fortuna (gta6-01 v7) — main.ts
-// Entrypoint the grader runs (Node 22, stdlib only). Copies game/ and
+// Entrypoint the grader runs (Node 22, stdlib only) to assemble the submission. Copies game/ and
 // screenshots/ from beside this file to the output dir and writes
 // /output/dossier.json with buildDossier from vendor/makefun-game.ts.
 // Never deletes the output dir (it is a mount point in the grader).
